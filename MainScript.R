@@ -707,6 +707,6 @@ df_combo <-data.frame (Interventions= c("MYC2=1 & ATAF1=0", "ATAF1=0", "MYC2=1")
 p6 <- plot_ly(df_combo, x = ~Interventions, y = ~Scores,
               name='Single vs multi node intervention under optimal conditions',
               marker=list(color=c('#2ca02c','#ff7f0e','#1f77b4')), 
-              text=round(df_combo$Scores,4), textposition='auto',type = 'bar') %>% 
+              text=round(df_combo$Scores,4), textposition='auto',textfont = list(color = '#000000'),type = 'bar') %>% 
   layout(xaxis=list(title='Nodes'),yaxis = list(title = 'scores',range=c(0,0.12)))
 show(p6)
